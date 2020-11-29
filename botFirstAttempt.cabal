@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 95c14dac11b2841c3ea899079c1e433ff5b1446840e6d79e334f1acf46ab5252
+-- hash: b0e6bf900b6d05b83f2e5a09b1a124500bcc9d0d5659cbd48b8241150a1146c5
 
 name:           botFirstAttempt
 version:        0.1.0.0
@@ -27,7 +27,6 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
       Type.Type
       Type.TypeTg
       Type.TypeVK
@@ -37,13 +36,13 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , configurator
     , text
   default-language: Haskell2010
 
 executable botFirstAttempt-exe
   main-is: Main.hs
   other-modules:
-      SubMain
       Paths_botFirstAttempt
   hs-source-dirs:
       app
@@ -51,6 +50,7 @@ executable botFirstAttempt-exe
   build-depends:
       base >=4.7 && <5
     , botFirstAttempt
+    , configurator
     , text
   default-language: Haskell2010
 
@@ -65,5 +65,6 @@ test-suite botFirstAttempt-test
   build-depends:
       base >=4.7 && <5
     , botFirstAttempt
+    , configurator
     , text
   default-language: Haskell2010
