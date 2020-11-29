@@ -1,4 +1,4 @@
-module Type where
+module Type.Type where
 
 import qualified Data.Text as T
 

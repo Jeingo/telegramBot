@@ -1,7 +1,7 @@
-module TypeVK
+module Type.TypeVK where
 
 import qualified Data.Text as T
-import qualified Type as TYPE
+import qualified Type.Type as TYPE
 
 data Config = Config
  { token :: T.Text }
