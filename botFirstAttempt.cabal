@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b0e6bf900b6d05b83f2e5a09b1a124500bcc9d0d5659cbd48b8241150a1146c5
+-- hash: 33646ad19faf7ee74c38c3a2368468887745cb77bf895556dac6d8f4843b6147
 
 name:           botFirstAttempt
 version:        0.1.0.0
@@ -20,6 +20,7 @@ build-type:     Simple
 extra-source-files:
     README.md
     ChangeLog.md
+    src/Config/commonConf.conf
 
 source-repository head
   type: git
@@ -27,6 +28,7 @@ source-repository head
 
 library
   exposed-modules:
+      MyLib.ConfigWorker
       Type.Type
       Type.TypeTg
       Type.TypeVK

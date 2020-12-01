@@ -1,20 +1,22 @@
+{-# LANGUAGE OverloadedStrings #-}
+
 module Main where
 
-import qualified Data.Configurator as C 
+import Type.Type ( CommonConfig(..))
+import MyLib.ConfigWorker (makeCommonConfig)
 
 main :: IO ()
 main = undefined
 
 startBot :: IO ()
 startBot = do
-  conf <- readConfig
+  commonCfg <- makeCommonConfig
   fstIni  <- fstInizialize
   let env = makeEnv
   cycleBot
   return ()
 
-
-readConfig = undefined
 fstInizialize = undefined
+
 makeEnv = undefined
 cycleBot = undefined
