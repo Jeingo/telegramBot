@@ -8,3 +8,8 @@ data CommonConfig = CommonConfig
  , repeatMsg :: T.Text
  , buttonStart :: T.Text } deriving Show
 
+data AddConfig = AddConfigTg
+ { tokenTg :: T.Text
+ } 
+ | AddConfigVK
+

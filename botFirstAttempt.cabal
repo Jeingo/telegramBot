@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 33646ad19faf7ee74c38c3a2368468887745cb77bf895556dac6d8f4843b6147
+-- hash: 9d64cca883f3484abdd2e3e0ee1f0ddb24d36efc98a27a50646ca5230249dd19
 
 name:           botFirstAttempt
 version:        0.1.0.0
@@ -21,6 +21,7 @@ extra-source-files:
     README.md
     ChangeLog.md
     src/Config/commonConf.conf
+    src/Config/additionalConf.conf
 
 source-repository head
   type: git
@@ -30,8 +31,6 @@ library
   exposed-modules:
       MyLib.ConfigWorker
       Type.Type
-      Type.TypeTg
-      Type.TypeVK
   other-modules:
       Paths_botFirstAttempt
   hs-source-dirs:

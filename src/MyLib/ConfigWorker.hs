@@ -5,11 +5,10 @@ module MyLib.ConfigWorker where
 import qualified Data.Configurator as C 
 import qualified Data.Configurator.Types as CT
 import qualified Data.Text as T
-import Type.Type ( CommonConfig(..))
+import Type.Type (CommonConfig(..), AddConfig(..))
 
-
-readConfig :: IO CT.Config
-readConfig = C.load [C.Required  "src/Config/commonConf.conf"]
+readCommonConfig :: IO CT.Config
+readCommonConfig = C.load [C.Required  "src/Config/commonConf.conf"]
 
 transleteFromConfigToMyType :: CT.Config -> IO CommonConfig
 transleteFromConfigToMyType cfg = do
@@ -20,7 +19,10 @@ transleteFromConfigToMyType cfg = do
   return $ CommonConfig typeB helpM repM counterR 
 
 makeCommonConfig :: IO CommonConfig
-makeCommonConfig = readConfig >>= transleteFromConfigToMyType 
+makeCommonConfig = readCommonConfig >>= transleteFromConfigToMyType 
 
+readAddConfig :: IO CT.Config
+readAddConfig = C.load [C.Required "src/Config/additionalConf.conf"] 
 
-
+makeAdditionalConfig :: T.Text -> IO AddConfig
+makeAdditionalConfig tpBot = undefined

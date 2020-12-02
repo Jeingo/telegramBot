@@ -10,6 +10,7 @@ extra-source-files:
 - README.md
 - ChangeLog.md
 - src/Config/commonConf.conf
+- src/Config/additionalConf.conf
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
