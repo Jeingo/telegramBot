@@ -9,7 +9,9 @@ data CommonConfig = CommonConfig
  , buttonStart :: T.Text } deriving Show
 
 data AddConfig = AddConfigTg
- { tokenTg :: T.Text
+ { token :: T.Text
  } 
  | AddConfigVK
+ { token :: T.Text
+ } deriving Show
 
