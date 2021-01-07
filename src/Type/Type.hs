@@ -15,3 +15,8 @@ data AddConfig = AddConfigTg
  { token :: T.Text
  } deriving Show
 
+data FstIni = FstIni
+  { updateId :: T.Text
+  , chatId :: T.Text
+  , message :: T.Text }
+

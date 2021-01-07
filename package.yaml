@@ -25,6 +25,7 @@ dependencies:
 - base >= 4.7 && < 5
 - text
 - configurator
+- HUnit
 
 library:
   source-dirs: src
@@ -42,7 +43,7 @@ executables:
 
 tests:
   botFirstAttempt-test:
-    main:                Spec.hs
+    main:                UnitTest.hs
     source-dirs:         test
     ghc-options:
     - -threaded
